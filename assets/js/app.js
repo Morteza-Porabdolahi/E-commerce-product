@@ -75,6 +75,7 @@ cartButton.addEventListener('click', function () {
             checkBtn.remove();
             cartButton.removeAttribute('disabled');
             number.innerHTML = 0;
+            cartNumber.innerHTML = 0;
             counter = 0;
         });
         //......................//
@@ -92,7 +93,11 @@ cartButton.addEventListener('click', function () {
         Element.appendChild(createElement);
         cartButton.setAttribute('disabled', 'disabled');
     } else {
-        return;
+        let alertContainer = document.getElementById('alert');
+        alertContainer.style.opacity = '1';
+        setTimeout(() => {
+            alertContainer.style.opacity = '0'
+        }, 2500);
     }
 });
 // ............................. //
