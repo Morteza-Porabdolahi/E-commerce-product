@@ -78,6 +78,12 @@ cartButton.addEventListener('click', function () {
             cartNumber.innerHTML = 0;
             counter = 0;
         });
+        //.........................//
+        let alertSuccess = document.getElementById('alert-success');
+        alertSuccess.style.display = 'flex';
+        setTimeout(() => {
+            alertSuccess.style.display = 'none'
+        }, 2500);
         //......................//
         minus.addEventListener('click', function () {
             if (number.innerHTML <= 0) {
@@ -94,9 +100,9 @@ cartButton.addEventListener('click', function () {
         cartButton.setAttribute('disabled', 'disabled');
     } else {
         let alertContainer = document.getElementById('alert');
-        alertContainer.style.opacity = '1';
+        alertContainer.style.display = 'flex';
         setTimeout(() => {
-            alertContainer.style.opacity = '0'
+            alertContainer.style.display = 'none'
         }, 2500);
     }
 });
