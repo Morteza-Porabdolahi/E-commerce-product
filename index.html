@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <section class="app">
+        <header>
+            <section class="header-container">
+                <section class="row">
+                    <section class="col-md-10">
+                        <section class="logo float-left cursor">
+                            <img src="assets/img/logo.svg" alt="logo">
+                        </section>
+                        <section class="nav">
+                            <nav>
+                                <ul class="header-list">
+                                    <li class="header-list-item">
+                                        <a href="#" class="header-list-item-link">Collections</a>
+                                    </li>
+                                    <li class="header-list-item">
+                                        <a href="#" class="header-list-item-link">Men</a>
+                                    </li>
+                                    <li class="header-list-item">
+                                        <a href="#" class="header-list-item-link">Women</a>
+                                    </li>
+                                    <li class="header-list-item">
+                                        <a href="#" class="header-list-item-link">About</a>
+                                    </li>
+                                    <li class="header-list-item">
+                                        <a href="#" class="header-list-item-link">Contact</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </section>
+                        <section class="clearfix"></section>
+                    </section>
+                    <section class="col-md-2">
+                        <section class="profile">
+                            <span class="icon-buy cursor" id="buy-cart"><img src="assets/img/icon-cart.svg"
+                                    alt="icon-cart"><span class="badge badge-secondary badge-cart"
+                                    id="badge-cart">0</span></span>
+                            <img src="assets/img/image-avatar.png" alt="avatar" class="avatar-img cursor"
+                                id="avatar-img">
+                        </section>
+                        <section class="cart-section" id="card-section">
+                            <section class="row">
+                                <section class="col-md-12">
+                                    <h6 class="cart-name">Cart</h6>
+                                </section>
+                            </section>
+                            <section class="line"></section>
+                            <section class="row">
+                                <section class="col-md-12">
+                                    <section id="cart-price" class="cart-price"></section>
+                                    <h5 class="cart-description" id="cart-description">Your cart is empty</h5>
+                                </section>
+                            </section>
+                        </section>
+                    </section>
+                </section>
+            </section>
+        </header>
+        <section class="line"></section>
+        <main>
+            <section class="main-container">
+                <section class="row">
+                    <section class="prudoct-container">
+                        <section class="col-md-6">
+                            <section class="product-img-container">
+                                <img src="assets/img/image-product-1.jpg" alt="product" class="product-img"
+                                    id="product-img">
+                            </section>
+                            <section class="thumbnails">
+                                <img src="assets/img/image-product-1-thumbnail.jpg" alt="thumbnail"
+                                    class="thumbnail-img cursor">
+                                <img src="assets/img/image-product-2-thumbnail.jpg" alt="thumbnail"
+                                    class="thumbnail-img cursor">
+                                <img src="assets/img/image-product-3-thumbnail.jpg" alt="thumbnail"
+                                    class="thumbnail-img cursor">
+                                <img src="assets/img/image-product-4-thumbnail.jpg" alt="thumbnail"
+                                    class="thumbnail-img cursor">
+                            </section>
+                        </section>
+                        <section class="col-md-6">
+                            <section class="product-description">
+                                <h5 class="company-name">SNEAKER COMPANY</h5>
+                                <h2 class="title">Fall Limited Edition Sneakers</h2>
+                                <p class="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia
+                                    exercitationem animi, laboriosam odio labore eius velit sapiente nemo natus. Facere
+                                    labore ut necessitatibus aliquam laboriosam eos illo praesentium sequi illum.</p>
+                            </section>
+                            <section class="product-price">
+                                <h4 class="product-new-price">$125.00 <span class="badge badge-secondary">50%</span>
+                                </h4>
+                                <h6 class="product-old-price">$250.00</h6>
+                            </section>
+                            <section class="cart-add">
+                                <section class="row">
+                                    <section class="col-md-4">
+                                        <section class="number">
+                                            <span id="minus" class="cursor"><img src="assets/img/icon-minus.svg"
+                                                    alt="minus-icon"></span>
+                                            <h4 class="product-number" id="product-number">0</h4>
+                                            <span id="plus" class="cursor"><img src="assets/img/icon-plus.svg"
+                                                    alt="plus-icon"></span>
+                                        </section>
+                                    </section>
+                                    <section class="col-md-8">
+                                        <button class="btn btn-block btn-cart-add" id="cart-add-btn"><span><i
+                                                    class="bi bi-cart4"></i></span>Add To Cart</button>
+                                    </section>
+                                </section>
+                            </section>
+                        </section>
+                    </section>
+                </section>
+                <section class="row">
+                    <section class="modal-container" id="modal-container">
+                        <section class="row">
+                            <section class="col-md-12">
+                                <section class="close-btn">
+                                    <span class="cursor">
+                                        <img src="assets/img/icon-close.svg" alt="close" class="close-img"
+                                            id="close-modal">
+                                    </span>
+                                </section>
+                            </section>
+                        </section>
+                        <section class="row">
+                            <section class="col-md-12">
+                                <section class="mymodal">
+                                    <section class="product-modal">
+                                        <span class="cursor"><img src="assets/img/icon-previous.svg" alt="previous"
+                                                class="control-modal-left control-modal" id="previus-modal"></span>
+                                        <img src="assets/img/image-product-1.jpg" alt="prudoct-img"
+                                            class="modal-big-img" id="modal-img">
+                                        <span class="cursor"><img src="assets/img/icon-next.svg" alt="next"
+                                                class="control-modal-right control-modal" id="next-modal"></span>
+                                    </section>
+                                    <section class="thumbnails">
+                                        <img src="assets/img/image-product-1-thumbnail.jpg" alt=""
+                                            class="modal-thumbnail cursor">
+                                        <img src="assets/img/image-product-2-thumbnail.jpg" alt=""
+                                            class="modal-thumbnail cursor">
+                                        <img src="assets/img/image-product-3-thumbnail.jpg" alt=""
+                                            class="modal-thumbnail cursor">
+                                        <img src="assets/img/image-product-4-thumbnail.jpg" alt=""
+                                            class="modal-thumbnail cursor">
+                                    </section>
+                                </section>
+                            </section>
+                        </section>
+                    </section>
+                </section>
+            </section>
+        </main>
+    </section>
+    <script src="assets/js/jquery/jquery-3.3.1.min.js"></script>
+    <script src="assets/js/app.js"></script>
+</body>
+
+</html>
