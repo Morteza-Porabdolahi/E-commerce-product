@@ -14,6 +14,7 @@ let minus = document.getElementById('minus');
 let number = document.getElementById('product-number');
 let cartNumber = document.getElementById('badge-cart');
 let counter = 0
+let buynumber = 1
 plus.addEventListener('click', function () {
     counter++;
     number.innerHTML = counter;
@@ -47,10 +48,17 @@ cartButton.addEventListener('click', function () {
         mediaBody.classList.add('media-body');
         let mediaBodyContent = document.createElement('p');
         mediaBodyContent.classList.add('media-content-para')
-        mediaBodyContent.innerHTML = 'Fall Limited Edition Sneakers $125.00 ' + ' * ' + counter + ' ';
+
         let span = document.createElement('span');
         span.classList.add('price-span')
         span.innerHTML = '$' + counter * 125 + '.00';
+        plus.addEventListener('click',function(){
+            span.innerHTML = '$' + counter * 125 + '.00';
+        })
+        minus.addEventListener('click',function(){
+            span.innerHTML = '$' + counter * 125 + '.00';
+        })
+        mediaBodyContent.innerHTML = 'Fall Limited Edition Sneakers $125.00 ' + ' * ' + counter + ' ';
         mediaBodyContent.appendChild(span)
         mediaBody.appendChild(mediaBodyContent);
         createElement.appendChild(mediaBody);
