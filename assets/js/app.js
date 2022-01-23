@@ -9,12 +9,12 @@ avatar.addEventListener('click', function () {
         cardElement.style.display = 'block'
     }
 });
+//----------------------------------------------//
 let plus = document.getElementById('plus');
 let minus = document.getElementById('minus');
 let number = document.getElementById('product-number');
 let cartNumber = document.getElementById('badge-cart');
 let counter = 0
-let buynumber = 1
 plus.addEventListener('click', function () {
     counter++;
     number.innerHTML = counter;
@@ -38,19 +38,20 @@ cartButton.addEventListener('click', function () {
         let Element = document.getElementById('cart-price');
         let createElement = document.createElement('section');
         createElement.classList.add('media');
-        //------------------//
+        //---------------------------------------------------------//
         let imgCreate = document.createElement('img');
         imgCreate.setAttribute('src', 'assets/img/image-product-1-thumbnail.jpg');
         imgCreate.classList.add('cart-img-buy')
         createElement.appendChild(imgCreate);
-        //---------------------//
+        //---------------------------------------------------------//
         let mediaBody = document.createElement('section');
         mediaBody.classList.add('media-body');
         let mediaBodyContent = document.createElement('p');
         mediaBodyContent.classList.add('media-content-para')
 
         let span = document.createElement('span');
-        span.classList.add('price-span')
+        span.classList.add('price-span');
+        //------------------------------------------------//
         span.innerHTML = '$' + counter * 125 + '.00';
         plus.addEventListener('click',function(){
             span.innerHTML = '$' + counter * 125 + '.00';
@@ -58,17 +59,18 @@ cartButton.addEventListener('click', function () {
         minus.addEventListener('click',function(){
             span.innerHTML = '$' + counter * 125 + '.00';
         })
+        //------------------------------------------------//
         mediaBodyContent.innerHTML = 'Fall Limited Edition Sneakers $125.00 ' + ' * ' + counter + ' ';
         mediaBodyContent.appendChild(span)
         mediaBody.appendChild(mediaBodyContent);
         createElement.appendChild(mediaBody);
-        //----------------------//
+        //---------------------------------------------------------//
         let checkBtn = document.createElement('button');
         checkBtn.classList.add('btn', 'btn-block')
         checkBtn.style.cssText = 'background-color : rgb(255, 94, 0) ; color : white ; border-radius : 7px;'
         checkBtn.innerHTML = 'CheckOut';
         $(checkBtn).insertAfter(Element);
-        //------------------------//
+        //---------------------------------------------------------//
         var deleteSpan = document.createElement('span');
         let deleteimg = document.createElement('img');
         deleteimg.classList.add('trash-icon')
@@ -76,7 +78,7 @@ cartButton.addEventListener('click', function () {
         deleteSpan.classList.add('cursor')
         deleteSpan.appendChild(deleteimg);
         mediaBodyContent.appendChild(deleteSpan);
-        //-----------------------//
+        //---------------------------------------------------------//
         deleteSpan.addEventListener('click', function () {
             cardDescription.innerHTML = 'Your cart is empty';
             Element.removeChild(createElement)
@@ -86,13 +88,13 @@ cartButton.addEventListener('click', function () {
             cartNumber.innerHTML = 0;
             counter = 0;
         });
-        //.........................//
+        //--------------------------------------------------------------------//
         let alertSuccess = document.getElementById('alert-success');
         alertSuccess.style.display = 'flex';
         setTimeout(() => {
             alertSuccess.style.display = 'none'
         }, 2500);
-        //......................//
+        //---------------------------------------------------------//
         minus.addEventListener('click', function () {
             if (number.innerHTML <= 0) {
                 cardDescription.innerHTML = 'Your cart is empty';
@@ -103,7 +105,7 @@ cartButton.addEventListener('click', function () {
                 counter = 0;
             }
         });
-        //.....................//
+        //------------------------------------------------
         Element.appendChild(createElement);
         cartButton.setAttribute('disabled', 'disabled');
     } else {
@@ -114,7 +116,7 @@ cartButton.addEventListener('click', function () {
         }, 2500);
     }
 });
-// ............................. //
+//------------------------------------------------//
 let thumbnails = document.getElementsByClassName('thumbnail-img');
 let BigImage = document.getElementById('product-img');
 let images = ['assets/img/image-product-1.jpg', 'assets/img/image-product-2.jpg', 'assets/img/image-product-3.jpg', 'assets/img/image-product-4.jpg'];
